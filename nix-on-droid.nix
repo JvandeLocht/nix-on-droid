@@ -10,6 +10,7 @@
     git
     vim # or some other editor, e.g. nano or neovim
 
+    # kubernetes
     kubectl
     talosctl
     kubernetes-helm
@@ -18,6 +19,11 @@
     yq-go
     kustomize
     kubeconform
+
+    #sops
+    sops
+    age
+
     wget
     curl
     zellij
