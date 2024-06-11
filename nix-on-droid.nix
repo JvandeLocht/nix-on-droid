@@ -23,6 +23,7 @@
     #sops
     sops
     age
+    pre-commit
 
     wget
     curl
@@ -45,6 +46,16 @@
     xz
     zip
     unzip
+
+    python3
+    pre-commit-hook-ensure-sops
+    python311Packages.pip
+    virtualenv
+
+    openssh
+    dig
+
+    # termux-wallpaper
   ];
   user.shell = "${pkgs.zsh}/bin/zsh";
   terminal.font = let
