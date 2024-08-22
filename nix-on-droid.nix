@@ -48,6 +48,9 @@
     xz
     zip
     unzip
+    inetutils
+    mycli
+    minio-client
 
     python3
     pre-commit-hook-ensure-sops
