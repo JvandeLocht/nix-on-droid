@@ -50,6 +50,8 @@
     unzip
     inetutils
     mycli
+    velero
+    tldr
     minio-client
 
     python3
