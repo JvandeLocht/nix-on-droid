@@ -9,7 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim-config.url = "github:JvandeLocht/nixvim-config";
+    nvf-config.url = "github:JvandeLocht/nvf-config";
 
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid/release-24.05";
@@ -23,7 +23,7 @@
     , nixpkgs
     , home-manager
     , nix-on-droid
-    , nixvim-config
+    , nvf-config
     ,
     }: {
       nixOnDroidConfigurations.default = nix-on-droid.lib.nixOnDroidConfiguration {
@@ -52,7 +52,7 @@
             # add other overlays
 
             (final: _prev: {
-              nixvim = nixvim-config.packages.${_prev.system}.default;
+              nvf = nvf-config.packages.${_prev.system}.default;
 
               # Or use the lite version
               # nixvim = nixvim-config.packages.${_prev.system}.lite;

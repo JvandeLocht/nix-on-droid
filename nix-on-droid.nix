@@ -9,7 +9,7 @@
     git
     ##vim # or some other editor, e.g. nano or neovim
     nano
-    nixvim
+    nvf
 
 
     # kubernetes
