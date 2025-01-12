@@ -19,7 +19,7 @@
     };
     zsh = {
       enable = true;
-      enableAutosuggestions = true;
+      autosuggestion.enable = true;
       prezto.autosuggestions.color = "cyan";
       syntaxHighlighting.enable = true;
       shellAliases = {
