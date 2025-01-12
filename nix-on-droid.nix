@@ -53,6 +53,8 @@
     velero
     tldr
     minio-client
+    s3fs
+    jq
 
     python3
     pre-commit-hook-ensure-sops
@@ -61,10 +63,13 @@
 
     openssh
     dig
+    busybox
+
 
     kompose
 
     ollama
+    xclip
     # termux-wallpaper
   ];
   user.shell = "${pkgs.zsh}/bin/zsh";
