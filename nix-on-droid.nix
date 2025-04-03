@@ -1,7 +1,8 @@
-{ config
-, lib
-, pkgs
-, ...
+{
+  config,
+  lib,
+  pkgs,
+  ...
 }: {
   # Simply install just the packages
   environment.packages = with pkgs; [
@@ -10,7 +11,7 @@
     ##vim # or some other editor, e.g. nano or neovim
     nano
     nvf
-
+    typst
 
     # kubernetes
     kubectl
@@ -54,6 +55,7 @@
     tldr
     minio-client
     s3fs
+    samba
     jq
 
     python3
@@ -63,8 +65,8 @@
 
     openssh
     dig
+    iproute2
     busybox
-
 
     kompose
 
@@ -73,13 +75,12 @@
     # termux-wallpaper
   ];
   user.shell = "${pkgs.zsh}/bin/zsh";
-  terminal.font =
-    let
-      fontPackage = pkgs.nerdfonts.override {
-        fonts = [ "UbuntuMono" ];
-      };
-      fontPath = "/share/fonts/truetype/NerdFonts/UbuntuMonoNerdFont-Regular.ttf";
-    in
+  terminal.font = let
+    fontPackage = pkgs.nerdfonts.override {
+      fonts = ["UbuntuMono"];
+    };
+    fontPath = "/share/fonts/truetype/NerdFonts/UbuntuMonoNerdFont-Regular.ttf";
+  in
     fontPackage + fontPath;
 
   # Backup etc files instead of failing to activate generation if a file already exists in /etc
